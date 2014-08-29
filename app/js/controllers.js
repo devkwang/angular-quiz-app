@@ -7,7 +7,6 @@ function QuestionsController($scope, $http, $routeParams, $location, $resultsSer
   $scope.questionNo = $routeParams && $routeParams.questionNo ? $routeParams.questionNo : 1;
   $http.get('http://devkwang.github.io/angular-quiz-app/app/questions/questions.json').success(function (questions){
     $scope.questions = questions;
-    window.alert("sometext");
   });
 
 
