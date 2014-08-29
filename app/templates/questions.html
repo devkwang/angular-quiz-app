@@ -2,6 +2,9 @@
   <!-- Carousel items -->
   <div class="carousel-inner">
     <div class="item" ng-repeat="question in questions" ng-class="{active : $index==(questionNo-1)}">
+      <!-- Carousel nav -->
+     <a class="carousel-control left" href="#questions" data-slide="prev" ng-hide="$first">&lsaquo;</a>
+     <a class="carousel-control right" href="#questions" data-slide="next" ng-hide="$last">&rsaquo;</a>
       <div class="row-fluid">
         <div class="span12 question">
           <h3>{{($index + 1)}}.) {{question.question}}</h3>
@@ -16,7 +19,5 @@
       </div>
     </div>
   </div>
-  <!-- Carousel nav -->
-  <a class="carousel-control left" href="#questions" data-slide="prev" ng-hide="$first">&lsaquo;</a>
-  <a class="carousel-control right" href="#questions" data-slide="next" ng-hide="$last">&rsaquo;</a>
+ 
 </div>
