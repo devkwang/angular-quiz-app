@@ -3,8 +3,10 @@
   <div class="carousel-inner">
     <div class="item" ng-repeat="question in questions" ng-class="{active : $index==(questionNo-1)}">
       <!-- Carousel nav -->
+     <div>
      <a class="carousel-control left" href="#questions" data-slide="prev" ng-hide="$first">&lsaquo;</a>
      <a class="carousel-control right" href="#questions" data-slide="next" ng-hide="$last">&rsaquo;</a>
+     </div>
       <div class="row-fluid">
         <div class="span12 question">
           <h3>{{($index + 1)}}.) {{question.question}}</h3>
