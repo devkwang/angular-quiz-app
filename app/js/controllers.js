@@ -5,10 +5,11 @@
 function QuestionsController($scope, $http, $routeParams, $location, $resultsService) {
 
   $scope.questionNo = $routeParams && $routeParams.questionNo ? $routeParams.questionNo : 1;
-  $http.get('http://devkwang.github.io/angular-quiz-app/app/questions/questions.json').success(function (questions){
+  /*$http.get('http://devkwang.github.io/angular-quiz-app/app/questions/questions.json').success(function (questions){
     $scope.questions = questions;
   });
-
+  */
+  $scope.questions = JSON.parse('http://devkwang.github.io/angular-quiz-app/app/questions/questions.json');
   $scope.selectAnswer = function (question, choice) {
     question.selected = choice;
   };
